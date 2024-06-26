@@ -11,3 +11,9 @@ function getComputerChoice(){
         return "scissors";
     }
 }
+
+// return human Input
+function getHumanChoice(){
+    humanChoice = prompt("Enter Rock, Paper, or Scissors");
+    return (humanChoice)   ;
+}
