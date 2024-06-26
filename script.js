@@ -19,7 +19,7 @@ function getHumanChoice(){
 }
 
 
-
+function playGame(){
 
 let humanScore = 0 ; 
 let computerScore = 0 ;
@@ -47,3 +47,21 @@ function playRound(humanChoice, computerChoice){
         }
 
 }
+
+for (i = 0; i < 5; i++){
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+    
+    playRound(humanSelection, computerSelection);
+    }
+    
+    if (humanScore > computerScore){
+        console.log("You win!")
+        console.log("Human Score: " + humanScore);
+        console.log("Computer Score: " + computerScore);
+    } else if (humanScore < computerScore){
+        console.log("You lose!")
+        console.log("Human Score: " + humanScore);
+        console.log("Computer Score: " + computerScore);
+    }
+    }
