@@ -11,19 +11,30 @@
 
 <body>
     <h1>ROCK - PAPER - SCISSORS</h1>
-
-    <div class="result-container">
-        <h4 id="hScore">Human Score: 0</h4>
-        <h4 id="cScore">Computer Score: 0</h4>
+    <div class="main-container">
+        <div class="result-container">
+            <div class="left">
+                <h4 id="hScore">Human Score: 0</h4>
+                <img id="human-choice-img" class="choice" src="/assets/fist.png" alt="Human Choice" width="100"
+                    height="100">
+            </div>
+            <div class="vs">VS</div>
+            <div class="right">
+                <h4 id="cScore">Computer Score: 0</h4>
+                <img id="computer-choice-img" class="choice" src="/assets/fist.png" alt="Human Choice" width="100"
+                    height="100">
+            </div>
+        </div>
     </div>
     <div class="winner">
         <p id="`result"></p>
     </div>
     <div class="btn-container">
-        <button id="rock"><img src="/assets/fist.png" alt="fist"></button>
-        <button id="paper"><img src="/assets/hand-paper.png" alt="paper"></button>
-        <button id="scissors"><img src="/assets/scissors.png" alt="scissors"></button>
+        <button id="rock" class="btn"><img src="/assets/fist.png" alt="fist"></button>
+        <button id="paper" class="btn"><img src="/assets/hand-paper.png" alt="paper"></button>
+        <button id="scissors" class="btn"><img src="/assets/scissors.png" alt="scissors"></button>
     </div>
+
     <script src="script.js"></script>
 </body>
 

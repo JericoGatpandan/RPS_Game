@@ -4,6 +4,8 @@ const rockbtn = document.querySelector("#rock");
 const paperbtn = document.querySelector("#paper");
 const scissorsbtn = document.querySelector("#scissors");
 const body = document.body;
+const humanChoiceImg = document.getElementById("human-choice-img");
+const computerChoiceImg = document.getElementById("computer-choice-img");
 
 
 //generate computer choice
@@ -36,6 +38,14 @@ let humanScore = 0 ;
 let computerScore = 0 ;
 
 function playRound(humanChoice, computerChoice){
+    const choices = {
+        rock: '/assets/fist.png',
+        paper: '/assets/hand-paper.png',
+        scissors: '/assets/scissors.png'
+    };
+
+    humanChoiceImg.src = choices[humanChoice];
+    computerChoiceImg.src = choices[computerChoice];
 
     const win = document.querySelector("p");
     const hScore = document.getElementById("hScore");
@@ -75,7 +85,11 @@ function playRound(humanChoice, computerChoice){
      
        hScore.textContent = `Human Score: ${humanScore}`;
        cScore.textContent = `Computer Score: ${computerScore}`
+       win.style.display = "flex";
+       win.style.justifyContent = "center";
+
        
+
 }
 
 
