@@ -3,6 +3,8 @@
 const rockbtn = document.querySelector("#rock");
 const paperbtn = document.querySelector("#paper");
 const scissorsbtn = document.querySelector("#scissors");
+const body = document.body;
+
 
 //generate computer choice
 function getComputerChoice(){
@@ -15,6 +17,7 @@ function getComputerChoice(){
         return "scissors";
     }
 }
+
 
 rockbtn.addEventListener("click", function(){
     playRound("rock", getComputerChoice());
@@ -33,28 +36,35 @@ let humanScore = 0 ;
 let computerScore = 0 ;
 
 function playRound(humanChoice, computerChoice){
-  
+    const win = document.createElement("p");
     if ((humanChoice == "rock" && computerChoice == "scissors") ||
         (humanChoice == "paper" && computerChoice == "rock") ||
         (humanChoice == "scissors" && computerChoice == "paper")){
-            console.log("You Win!");
+            
+            win.textContent = "You Win!";
+            body.append(win);
             humanScore++;
         } else if (humanChoice == computerChoice){
             console.log("It's a tie!")
         } else if (humanChoice == "scissors" && computerChoice == "rock"){
-            console.log("You lose! Rock beats Scissors");
+            win.textContent = "You lose! Rock beats Scissors";
+            body.append(win);
             computerScore++;
         } else if (humanChoice == "rock" && computerChoice == "paper"){
-            console.log("You lose! Paper beats Rock");
+            win.textContent = "You lose! Paper beats Rock";
+            body.append(win);
             computerScore++;
         } else if (humanChoice == "paper" && computerChoice == "scissors"){
-            console.log("You lose! Scissors beats Paper");
+            win.textContent = "You lose! Scissors beats Paper";
+            body.append(win);
             computerScore++;
         } else {
             console.log("invalid choice! Enter the right format");
         }
 
 }
+
+
 
 // for (i = 0; i < 5; i++){
 //     const humanSelection = getHumanChoice();
@@ -72,4 +82,6 @@ function playRound(humanChoice, computerChoice){
         console.log("Human Score: " + humanScore);
         console.log("Computer Score: " + computerScore);
     }
+    
+    
     
