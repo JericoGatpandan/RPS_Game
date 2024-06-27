@@ -84,9 +84,3 @@ function playRound(humanChoice, computerChoice) {
   win.style.justifyContent = "center";
 }
 
-// for (i = 0; i < 5; i++){
-//     const humanSelection = getHumanChoice();
-//     const computerSelection = getComputerChoice();
-
-//     playRound(humanSelection, computerSelection);
-//     }
