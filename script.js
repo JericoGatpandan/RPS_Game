@@ -36,32 +36,46 @@ let humanScore = 0 ;
 let computerScore = 0 ;
 
 function playRound(humanChoice, computerChoice){
-    const win = document.createElement("p");
+
+    const win = document.querySelector("p");
+    const hScore = document.getElementById("hScore");
+    const cScore = document.getElementById("cScore")
+    
     if ((humanChoice == "rock" && computerChoice == "scissors") ||
         (humanChoice == "paper" && computerChoice == "rock") ||
         (humanChoice == "scissors" && computerChoice == "paper")){
-            
+
             win.textContent = "You Win!";
             body.append(win);
             humanScore++;
         } else if (humanChoice == computerChoice){
-            console.log("It's a tie!")
+            win.textContent = "It's a tie!" ;
+            body.append(win)
         } else if (humanChoice == "scissors" && computerChoice == "rock"){
             win.textContent = "You lose! Rock beats Scissors";
             body.append(win);
             computerScore++;
+        const score = document.querySelector("h4");
+
         } else if (humanChoice == "rock" && computerChoice == "paper"){
             win.textContent = "You lose! Paper beats Rock";
             body.append(win);
             computerScore++;
+
+
         } else if (humanChoice == "paper" && computerChoice == "scissors"){
             win.textContent = "You lose! Scissors beats Paper";
             body.append(win);
             computerScore++;
+
+
         } else {
             console.log("invalid choice! Enter the right format");
         }
-
+     
+       hScore.textContent = `Human Score: ${humanScore}`;
+       cScore.textContent = `Computer Score: ${computerScore}`
+       
 }
 
 
@@ -73,15 +87,11 @@ function playRound(humanChoice, computerChoice){
 //     playRound(humanSelection, computerSelection);
 //     }
     
-    if (humanScore > computerScore){
-        console.log("You win!")
-        console.log("Human Score: " + humanScore);
-        console.log("Computer Score: " + computerScore);
-    } else if (humanScore < computerScore){
-        console.log("You lose!")
-        console.log("Human Score: " + humanScore);
-        console.log("Computer Score: " + computerScore);
-    }
+   
+       
+       
+   
+    
     
     
     
