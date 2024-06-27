@@ -34,9 +34,9 @@ let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
   const choices = {
-    rock: "/assets/fist.png",
-    paper: "/assets/hand-paper.png",
-    scissors: "/assets/scissors.png",
+    rock: "./assets/fist.png",
+    paper: "./assets/hand-paper.png",
+    scissors: "./assets/scissors.png",
   };
 
   humanChoiceImg.src = choices[humanChoice];
